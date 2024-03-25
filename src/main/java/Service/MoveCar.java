@@ -16,7 +16,11 @@ public class MoveCar {
         }
     }
 
-    public void moveCars(RacingCars racingCars){
-
+    public Map<RacingCar, Integer> moveCars(RacingCars racingCars){
+        Map<RacingCar, Integer> racingCarList = racingCars.getRacingCars();
+        for(Map.Entry<RacingCar, Integer> entry : racingCarList.entrySet()){
+            moveCar(entry.getKey());
+        }
+        return racingCarList;
     }
 }
