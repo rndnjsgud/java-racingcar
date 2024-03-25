@@ -24,5 +24,5 @@ public class Output {
         System.out.println("\b\b" + "가 최종 우승했습니다");
 
 
-    }
+    }*/
 }
