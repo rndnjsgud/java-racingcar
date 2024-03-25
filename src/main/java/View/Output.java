@@ -15,7 +15,7 @@ public class Output {
         System.out.println(RESULT);
        List<RacingCar> racingCarList = racingCars.getRacingCars();
        racingCarList.stream()
-                       .forEach(cars -> System.out.println(cars.getCarName() + " : " + '-' * cars.getCarPosition() + "\n"));
+                       .forEach(cars -> System.out.println(cars.getCarName() + " : " + "-".repeat( cars.getCarPosition())));
     }
 /*
     public static void printFinalResult(RacingCars racingCars){
@@ -24,5 +24,5 @@ public class Output {
         System.out.println("\b\b" + "가 최종 우승했습니다");
 
 
-    }*/
+    }
 }

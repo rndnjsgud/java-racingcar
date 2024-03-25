@@ -13,10 +13,17 @@ public class Input {
     private static final String INPUT_GAME_NUMBER = "시도할 횟수는 몇 회인가요?";
 
     public static List<String> inputCarName(){ //리스트로 차 이름 받은 후 controller에서 Racingcars 생성
+        System.out.println(INPUT_CAR_NAME);
         Scanner sc = new Scanner(System.in);
         List<String> carNames = Arrays.stream(sc.next()
                 .split(","))
                 .toList();
         return carNames;
+    }
+
+    public static int inputGameNumber(){
+        System.out.println(INPUT_GAME_NUMBER);
+        Scanner sc = new Scanner(System.in);
+        return sc.nextInt();
     }
 }

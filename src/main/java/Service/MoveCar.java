@@ -17,11 +17,11 @@ public class MoveCar {
         }
     }
 
-    public List<RacingCar> moveCars(RacingCars racingCars){
+    public void moveCars(RacingCars racingCars){
        List<RacingCar> racingCarList = racingCars.getRacingCars();
        racingCarList.stream()
                .forEach(this::moveCar);
 
-       return racingCarList;
+       //return racingCarList;
     }
 }
