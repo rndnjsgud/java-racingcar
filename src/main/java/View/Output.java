@@ -10,7 +10,7 @@ import java.util.Map;
 public class Output {
     private static final String RESULT = "실행결과\n";
 
-    public void printResults(RacingCars racingCars){
+    public static void printResults(RacingCars racingCars){
         System.out.println(RESULT);
         Map<RacingCar, Integer> racingCarList = racingCars.getRacingCars();
         for(Map.Entry<RacingCar, Integer> entry : racingCarList.entrySet()){
@@ -20,7 +20,7 @@ public class Output {
         }
     }
 
-    public void printFinalResult(RacingCars racingCars){
+    public static void printFinalResult(RacingCars racingCars){
         Map<RacingCar, Integer> racingCarList = racingCars.getRacingCars();
         int maxValue = (Collections.max(racingCarList.values()));
         for(Map.Entry<RacingCar, Integer> entry : racingCarList.entrySet()){
