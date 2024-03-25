@@ -18,7 +18,7 @@ public class Output {
                        .forEach(cars -> System.out.println(cars.getCarName() + " : " + "-".repeat( cars.getCarPosition())));
     }
 
-    public int findWinnersPosition(RacingCars racingCars){
+    public static int findWinnersPosition(RacingCars racingCars){
         List<RacingCar> racingCarList = racingCars.getRacingCars();
         int maxPosition = 0;
         for(int i = 0 ; i < racingCarList.size() ; i++){
@@ -27,7 +27,7 @@ public class Output {
         return maxPosition;
     }
 
-    public int findBigger(int n, int m){
+    public static int findBigger(int n, int m){
         if(n > m){
             return n;
         }
@@ -36,9 +36,11 @@ public class Output {
 
     public static void printFinalResult(RacingCars racingCars){
         List<RacingCar> racingCarList = racingCars.getRacingCars();
-        int maxPosition = 0;
-        for(int i = 0 ; i < racingCarList.size() ; i++){
-
+        int winnersPosition = findWinnersPosition(racingCars);
+        for(int i = 0 ; i > racingCarList.size() ; i++){
+            if(racingCarList.get(i).getCarPosition() == winnersPosition){
+                System.out.println(racingCarList.get(i).getCarName() + ", ");
+            }
         }
         System.out.println("\b\b" + FINAL_RESULT);
     }
