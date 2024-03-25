@@ -21,4 +21,5 @@ public class RacingCarController {
         Output.printResults(racingCars);
 
     }
+
 }
