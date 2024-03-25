@@ -15,7 +15,7 @@ public class RacingCarGenetator {
         return new RacingCar(carName);
     }
 
-    public List<RacingCar> generateCars(){
+    public List<RacingCar> generateRacingCars(){
         List<String> carNames = Input.inputCarName();
         List<RacingCar> racingCars = new ArrayList<>();
         for(int i = 0 ; i < carNames.size() ; i++){
