@@ -3,6 +3,7 @@ package Service;
 import Domain.RacingCar;
 import Domain.RacingCars;
 
+import java.util.List;
 import java.util.Map;
 
 public class MoveCar {
@@ -16,11 +17,11 @@ public class MoveCar {
         }
     }
 
-    public Map<RacingCar, Integer> moveCars(RacingCars racingCars){
-        Map<RacingCar, Integer> racingCarList = racingCars.getRacingCars();
-        for(Map.Entry<RacingCar, Integer> entry : racingCarList.entrySet()){
-            moveCar(entry.getKey());
-        }
-        return racingCarList;
+    public List<RacingCar> moveCars(RacingCars racingCars){
+       List<RacingCar> racingCarList = racingCars.getRacingCars();
+       racingCarList.stream()
+               .forEach(this::moveCar);
+
+       return racingCarList;
     }
 }

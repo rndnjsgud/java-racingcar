@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 public class RacingCars {
-    private Map<RacingCar, Integer> racingCars;
+    private List<RacingCar> racingCars;
 
-    public RacingCars (Map<RacingCar, Integer> racingCars){
+    public RacingCars (List<RacingCar> racingCars){
         this.racingCars = racingCars;
     }
 
-    public Map<RacingCar, Integer> getRacingCars(){
+    public List<RacingCar> getRacingCars(){
         return racingCars;
     }
 }
