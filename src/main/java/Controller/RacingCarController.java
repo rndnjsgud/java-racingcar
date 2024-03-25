@@ -19,7 +19,7 @@ public class RacingCarController {
             moveCar.moveCars(racingCars);
         }
         Output.printResults(racingCars);
-
+        Output.printFinalResult(racingCars);
     }
 
 }

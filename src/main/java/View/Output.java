@@ -12,10 +12,11 @@ public class Output {
     private static final String RESULT = "실행결과\n";
     private static final String FINAL_RESULT = "가 최종 우승했습니다";
     public static void printResults(RacingCars racingCars){
-        System.out.println(RESULT);
+        System.out.print(RESULT);
        List<RacingCar> racingCarList = racingCars.getRacingCars();
        racingCarList.stream()
                        .forEach(cars -> System.out.println(cars.getCarName() + " : " + "-".repeat( cars.getCarPosition())));
+        System.out.println();
     }
 
     public static int findWinnersPosition(RacingCars racingCars){
@@ -37,11 +38,11 @@ public class Output {
     public static void printFinalResult(RacingCars racingCars){
         List<RacingCar> racingCarList = racingCars.getRacingCars();
         int winnersPosition = findWinnersPosition(racingCars);
-        for(int i = 0 ; i > racingCarList.size() ; i++){
+        for(int i = 0 ; i < racingCarList.size() ; i++){
             if(racingCarList.get(i).getCarPosition() == winnersPosition){
-                System.out.println(racingCarList.get(i).getCarName() + ", ");
+                System.out.print(racingCarList.get(i).getCarName() + ", ");
             }
         }
-        System.out.println("\b\b" + FINAL_RESULT);
+        System.out.print("\b\b" + FINAL_RESULT);
     }
 }
